@@ -6,6 +6,15 @@
 # Ubuntu 20.04
 #
 
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  exit 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  exit 2
+fi
+
+hostnamectl set-hostname $1
 
 # Purge the default software
 sudo apt-get remove --purge libreoffice*
