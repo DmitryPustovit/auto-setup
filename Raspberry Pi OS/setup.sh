@@ -16,6 +16,9 @@ elif [ $# -gt 2 ]; then
   exit 2
 fi
 
+# Technically this isn't needed because, this script should be cloned via git but, eh why not...
+sudo apt install git
+
 hostnamectl set-hostname $1
 ### TODO fix password change command passwd pi $2
 
