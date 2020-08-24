@@ -1,0 +1,8 @@
+# Not really a script but, commands that need to run
+
+configure
+
+set system offload hwnat enable
+set system offload ipsec enable
+
+commit ; save
