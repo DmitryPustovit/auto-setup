@@ -1,0 +1,22 @@
+# Not really a script but, apple decided to not enable SSD trim unless
+# it's a apple SSD. Need to enable it to get decent performance.
+
+
+# Enable SSD trim
+sudo trimforce enable
+
+
+# Improve the performance of a drive that Mac OS has already
+# been using.
+# 
+# To use this, "Single User Mode" is needed
+# "Ctrl + S" at boot for Single User Mode
+fsck -fy
+
+
+
+# Check read speed of drive
+time dd if=/dev/zero bs=1024k of=tstfile count=1024
+
+# Check write speed of drive
+time dd if=tstfile bs=1024k of=/dev/null count=1024
