@@ -1,7 +1,9 @@
 [Unit]
 Description=SNMP Exporter
+After=network-online.target
 
 [Service]
+Restart=on-failure
 ExecStart=/usr/local/bin/snmp_exporter --config.file='/usr/local/bin/snmp_exporter/snmp.yml'
 
 [Install]
