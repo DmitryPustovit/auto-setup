@@ -1,0 +1,8 @@
+[Unit]
+Description=SNMP Exporter
+
+[Service]
+ExecStart=/usr/local/bin/snmp_exporter --config.file='/usr/local/bin/snmp_exporter/snmp.yml'
+
+[Install]
+WantedBy=multi-user.target
