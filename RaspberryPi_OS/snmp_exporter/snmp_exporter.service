@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Restart=on-failure
-ExecStart=/usr/local/bin/snmp_exporter --config.file='/usr/local/bin/snmp_exporter/snmp.yml'
+ExecStart=/usr/local/bin/snmp_exporter --config.file='/home/snmp_exporter/snmp.yml'
 
 [Install]
 WantedBy=multi-user.target

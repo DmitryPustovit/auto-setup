@@ -18,8 +18,11 @@ sudo useradd -m -s /bin/bash snmp_exporter
 sudo mkdir /var/lib/snmp_exporter
 sudo chown -R snmp_exporter:snmp_exporter /var/lib/snmp_exporter
 
+# Config file
+sudo cp snmp_exporter-0.20.0.linux-armv6/snmp.yml /home/snmp_exporter/snmp.yml
+
 # Reload systemd
-wget https://raw.githubusercontent.com/prometheus/snmp_exporter/main/examples/systemd/snmp_exporter.service
+wget https://raw.githubusercontent.com/DmitryPustovit/auto-setup/master/RaspberryPi_OS/snmp_exporter/snmp_exporter.service
 sudo cp snmp_exporter.service /etc/systemd/system/snmp_exporter.service
 
 # Reload systemd
