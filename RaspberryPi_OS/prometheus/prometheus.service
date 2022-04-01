@@ -1,0 +1,9 @@
+[Unit]
+Description=Prometheus
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/prometheus --config.file=/home/prometheus/config.yml --storage.tsdb.path=/home/prometheus/data
+
+[Install]
+WantedBy=multi-user.target
