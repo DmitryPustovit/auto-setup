@@ -19,6 +19,7 @@ sudo mkdir /var/lib/node_exporter
 sudo chown -R node_exporter:node_exporter /var/lib/node_exporter
 
 # Service file
+wget https://raw.githubusercontent.com/DmitryPustovit/auto-setup/master/RaspberryPi_OS/node_exporter/node_exporter.service
 sudo cp node_exporter.service /etc/systemd/system/node_exporter.service
 
 # Reload systemd
