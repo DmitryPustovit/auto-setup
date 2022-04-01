@@ -1,0 +1,9 @@
+[Unit]
+Description=Push Gateway
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/pushgateway
+
+[Install]
+WantedBy=multi-user.target
