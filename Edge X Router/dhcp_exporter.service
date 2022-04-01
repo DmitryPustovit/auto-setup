@@ -1,0 +1,10 @@
+[Unit]
+Description=DHCP Lease Export
+
+[Service]
+Restart=always
+RestartSec=300s
+ExecStart=/bin/bash /home/dhcp_exporter/dhcp_export.sh
+
+[Install]
+WantedBy=multi-user.target

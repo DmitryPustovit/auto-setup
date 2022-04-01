@@ -13,3 +13,14 @@ exit
 
 # See all connected devices
 show arp
+
+
+sudo useradd -m -s /bin/bash dhcp_exporter
+
+sudo cp dhcp_exporter.service /etc/systemd/system/dhcp_exporter.service
+
+sudo systemctl daemon-reload 
+sudo systemctl enable dhcp_exporter.service
+sudo systemctl start dhcp_exporter.service
+
+systemctl status dhcp_exporter
