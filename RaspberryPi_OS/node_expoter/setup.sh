@@ -6,11 +6,21 @@
 ###
 
 # Download Metric Exporter
-wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-armv6.tar.gz
-tar -xvzf node_exporter-1.0.1.linux-armv6.tar.gz
+# CPUTYPES:
+# PI 4 
+#   armv7
+# Pi B+
+# Pi Zero
+# Pi Zero W
+#   armv6
+CPUTYPE=armv7
+VERSION=1.3.1
+
+wget https://github.com/prometheus/node_exporter/releases/download/v$VERSION/node_exporter-$VERSION.linux-$CPUTYPE.tar.gz 
+tar -xvzf node_exporter-$VERSION.linux-$CPUTYPE.tar.gz
 
 # Move it to a proper location
-sudo cp node_exporter-1.0.1.linux-armv6/node_exporter /usr/local/bin
+sudo cp node_exporter-$VERSION.linux-$CPUTYPE/node_exporter /usr/local/bin
 
 # Make executable and create user with needed permissions
 sudo chmod +x /usr/local/bin/node_exporter
