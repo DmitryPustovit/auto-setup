@@ -14,8 +14,8 @@ foreach ($device in $devices) {
     $response = Read-Host -Prompt $confirmMessage
 
     if ($response -eq "Y" -or $response -eq "y") {
-        Write-Host "Disabling device: [$deviceID]"
-        powercfg -devicedisablewake $deviceID
+        Write-Host "Disabling device: [$device]"
+        powercfg -devicedisablewake $device
     }
 }
 
